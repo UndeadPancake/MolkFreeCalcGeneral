@@ -19,6 +19,8 @@ namespace ConsoleCalc
 
             do 
             {
+                Console.Clear();
+                Console.WriteLine(cs.StackString());
                 input = Console.ReadLine();
                 //Console.WriteLine(input);
                 inputSplit = input.Split();
