@@ -14,6 +14,15 @@ namespace ConsoleCalc
             CStack cs;
             cs = new CStack();
             cs.X = 12;
+            string input;
+            string[] inputSplit;
+
+            do 
+            {
+
+                input = Console.ReadLine();
+                Console.WriteLine(input);
+            }while (input != "quit");
         }
     }
 }
