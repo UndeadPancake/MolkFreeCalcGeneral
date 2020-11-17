@@ -44,6 +44,9 @@ namespace ConsoleCalc
                     case "show":
                         Console.WriteLine("show");
                         break;
+                    default:
+                        Console.WriteLine("Unknown command!");
+                        break;
                 }
             }while (input != "quit");
         }
