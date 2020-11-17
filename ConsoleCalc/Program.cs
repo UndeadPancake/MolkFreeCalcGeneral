@@ -13,32 +13,35 @@ namespace ConsoleCalc
         {
             CStack cs;
             cs = new CStack();
-            cs.X = 12;
             string input;
             string[] inputSplit;
 
-            do 
+            do
             {
                 Console.Clear();
-                Console.WriteLine(cs.StackString());
+                Console.Write($"T: {cs.T}\nZ: {cs.Z}\nY: {cs.Y}\nX: {cs.X}\nEntry: ");
                 input = Console.ReadLine();
-                //Console.WriteLine(input);
-                inputSplit = input.Split();
+                inputSplit = input.Split(' ');
                 switch (inputSplit[0])
                 {
                     case "enter":
-                        Console.WriteLine("enter");
+                        cs.entry = inputSplit[1];
+                        cs.Enter();
                         break;
                     case "+":
+                        cs.BinOp("+");
                         Console.WriteLine("+");
                         break;
                     case "-":
+                        cs.BinOp("−");
                         Console.WriteLine("-");
                         break;
                     case "*":
+                        cs.BinOp("×");
                         Console.WriteLine("*");
                         break;
                     case "/":
+                        cs.BinOp("÷");
                         Console.WriteLine("/");
                         break;
                     case "show":
@@ -48,7 +51,7 @@ namespace ConsoleCalc
                         Console.WriteLine("Unknown command!");
                         break;
                 }
-            }while (input != "quit");
+            } while (input != "quit");
         }
     }
 }
