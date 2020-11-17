@@ -19,9 +19,30 @@ namespace ConsoleCalc
 
             do 
             {
-
                 input = Console.ReadLine();
-                Console.WriteLine(input);
+                //Console.WriteLine(input);
+                inputSplit = input.Split();
+                switch (inputSplit[0])
+                {
+                    case "enter":
+                        Console.WriteLine("enter");
+                        break;
+                    case "+":
+                        Console.WriteLine("+");
+                        break;
+                    case "-":
+                        Console.WriteLine("-");
+                        break;
+                    case "*":
+                        Console.WriteLine("*");
+                        break;
+                    case "/":
+                        Console.WriteLine("/");
+                        break;
+                    case "show":
+                        Console.WriteLine("show");
+                        break;
+                }
             }while (input != "quit");
         }
     }
