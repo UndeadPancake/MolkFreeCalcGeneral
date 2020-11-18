@@ -72,7 +72,7 @@ namespace ConsoleCalc
                     
                     return cs;
                 case "quit":
-                    Console.WriteLine("Quitting...");
+                    Console.WriteLine("Goodbye!\nPress any key to quit...");
                     Console.ReadKey();
                     return cs;
                 default:
